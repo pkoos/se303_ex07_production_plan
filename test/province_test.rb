@@ -6,10 +6,10 @@ require_relative '../lib/data'
 
 class ProvinceTest < Minitest::Test
 
-	attr_reader :asia
+	attr_reader :asia, :no_producers
 	def setup
 		@asia = Province.new(sample_province_data)
-		@no_producers = Province.new(no_producers)
+		@no_producers = Province.new(no_producer)
 	end
 
   def test_province_shortfall
@@ -24,5 +24,9 @@ class ProvinceTest < Minitest::Test
 		asia.producers[0].production = 20
 		assert_equal(-6, asia.shortfall)
 		assert_equal(292, asia.profit)
+	end
+
+	def test_province_no_producers_shortfall
+		assert_equal(30, no_producers.shortfall)
 	end
 end
