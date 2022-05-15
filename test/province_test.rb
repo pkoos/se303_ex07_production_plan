@@ -6,7 +6,7 @@ require_relative '../lib/data'
 
 class ProvinceTest < Minitest::Test
 
-	attr_reader :asia, :no_producers
+	attr_reader :asia, :no_producers, :string_for_producers
 	def setup
 		@asia = Province.new(sample_province_data)
 		@no_producers = Province.new(no_producer)

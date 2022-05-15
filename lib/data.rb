@@ -13,11 +13,20 @@ def sample_province_data
   }
 end
 
-	def no_producer
-		{
-			name: "No proudcers",
-			producers: [],
-			demand: 30,
-			price: 20
-		}
+def no_producer
+	{
+		name: 'No proudcers',
+		producers: [],
+		demand: 30,
+		price: 20
+	}
+end
+
+def string_for_producer
+	{
+		name: 'String producers',
+		producers: '',
+		demand: 30,
+		price: 20
+	}
 end
