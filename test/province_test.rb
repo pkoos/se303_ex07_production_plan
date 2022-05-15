@@ -9,6 +9,7 @@ class ProvinceTest < Minitest::Test
 	attr_reader :asia
 	def setup
 		@asia = Province.new(sample_province_data)
+		@no_producers = Province.new(no_producers)
 	end
 
   def test_province_shortfall
